@@ -105,6 +105,8 @@ module.exports = (grunt) => {
           } else {
             compiler.run(handler);
           }
+
+          compiler.close();
         });
       });
     },
