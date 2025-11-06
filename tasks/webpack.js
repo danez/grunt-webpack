@@ -33,6 +33,8 @@ module.exports = (grunt) => {
         return;
       }
 
+      const compilerClosePromises = [];
+
       targets.forEach((target) => {
         if (target === "options") {
           runningTargetCount--;
@@ -97,7 +99,16 @@ module.exports = (grunt) => {
 
             keepalive = keepalive || opts.keepalive;
 
-            if (--runningTargetCount === 0 && !keepalive) done();
+            if (!keepalive) {
+              compilerClosePromises.push(new Promise((resolve, reject) =>
+                compiler.close((err) => err ? reject(err) : resolve())
+              ));
+              if (--runningTargetCount === 0) {
+                Promise.all(compilerClosePromises)
+                  .then(() => done())
+                  .catch((err) => done(err));
+              }
+            }
           };
 
           if (opts.watch) {
@@ -105,8 +116,6 @@ module.exports = (grunt) => {
           } else {
             compiler.run(handler);
           }
-
-          compiler.close();
         });
       });
     },
