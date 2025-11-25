@@ -3,10 +3,10 @@ BEFORE YOU SUBMIT please read the following:
 
 If you have a support request or question please submit them to one of this resources:
 
-* Gitter: https://gitter.im/webpack-contrib/grunt-webpack
+* Gitter: https://gitter.im/webpack/grunt-webpack
 * StackOverflow: http://stackoverflow.com/questions/tagged/webpack+gruntjs using the tags `[webpack]` and `[gruntjs]`
 
-Issues on github are only related to problems of grunt-webpack itself and we cannot answer 
+Issues on github are only related to problems of grunt-webpack itself and we cannot answer
 support questions here.
 -->
 
@@ -42,9 +42,9 @@ support questions here.
 <!--- To find the package versions you can use `npm ls grunt webpack grunt-webpack` -->
 | software         | version
 | ---------------- | -------
-| webpack          | 
+| webpack          |
 | grunt-webpack    |
 | grunt            |
-| node             | 
-| npm              | 
-| Operating System | 
+| node             |
+| npm              |
+| Operating System |

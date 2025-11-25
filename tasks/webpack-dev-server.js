@@ -48,7 +48,7 @@ or similar with you favorite package manager.
       if (runningTargetCount === 0) {
         done(
           new Error(
-            "No configuration was found for webpack-dev-server. For further assistance on how to create the config refer to https://github.com/webpack-contrib/grunt-webpack/blob/master/README.md#grunt-webpack",
+            "No configuration was found for webpack-dev-server. For further assistance on how to create the config refer to https://github.com/webpack/grunt-webpack/blob/main/README.md#grunt-webpack",
           ),
         );
         return;

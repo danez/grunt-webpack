@@ -2,16 +2,16 @@
   "name": "grunt-webpack",
   "description": "Use webpack with grunt.",
   "version": "7.0.1",
-  "homepage": "https://github.com/webpack-contrib/grunt-webpack",
+  "homepage": "https://github.com/webpack/grunt-webpack",
   "author": {
     "name": "Tobias Koppers @sokra"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webpack-contrib/grunt-webpack.git"
+    "url": "git+https://github.com/webpack/grunt-webpack.git"
   },
   "bugs": {
-    "url": "https://github.com/webpack-contrib/grunt-webpack/issues"
+    "url": "https://github.com/webpack/grunt-webpack/issues"
   },
   "publishConfig": {
     "provenance": true
