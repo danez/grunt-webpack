@@ -13,7 +13,7 @@
   "publishConfig": {
     "provenance": true
   },
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@10.23.0",
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/webpack"
@@ -39,21 +39,21 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/core": "^7.27.1",
-    "@babel/preset-env": "^7.27.2",
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
     "babel-loader": "^9.2.1",
     "eslint": "^8.57.1",
-    "eslint-config-prettier": "^8.10.0",
+    "eslint-config-prettier": "^8.10.2",
     "eslint-config-webpack": "^1.2.5",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
     "fast-glob": "^3.3.3",
-    "fs-extra": "^11.3.0",
+    "fs-extra": "^11.3.2",
     "grunt": "^1.6.1",
-    "jest": "^29.7.0",
-    "prettier": "^3.5.3",
-    "webpack": "^5.99.8",
-    "webpack-dev-server": "^5.2.1"
+    "jest": "^30.2.0",
+    "prettier": "^3.6.2",
+    "webpack": "^5.103.0",
+    "webpack-dev-server": "^5.2.2"
   },
   "dependencies": {
     "deep-for-each": "^3.0.0",
