@@ -33,6 +33,8 @@ module.exports = (grunt) => {
         return;
       }
 
+      const compilerClosePromises = [];
+
       targets.forEach((target) => {
         if (target === "options") {
           runningTargetCount--;
@@ -61,9 +63,9 @@ module.exports = (grunt) => {
             processPluginFactory.addPlugin(compiler, webpackOptions);
           }
 
-          const handler = (err, stats) => {
-            if (err) {
-              done(err);
+          const handler = (webpackErr, stats) => {
+            if (webpackErr) {
+              done(webpackErr);
               return;
             }
 
@@ -97,7 +99,18 @@ module.exports = (grunt) => {
 
             keepalive = keepalive || opts.keepalive;
 
-            if (--runningTargetCount === 0 && !keepalive) done();
+            if (!keepalive) {
+              compilerClosePromises.push(
+                new Promise((resolve, reject) =>
+                  compiler.close((err) => (err ? reject(err) : resolve())),
+                ),
+              );
+              if (--runningTargetCount === 0) {
+                Promise.all(compilerClosePromises)
+                  .then(() => done())
+                  .catch((err) => done(err));
+              }
+            }
           };
 
           if (opts.watch) {
