@@ -63,9 +63,9 @@ module.exports = (grunt) => {
             processPluginFactory.addPlugin(compiler, webpackOptions);
           }
 
-          const handler = (err, stats) => {
-            if (err) {
-              done(err);
+          const handler = (webpackErr, stats) => {
+            if (webpackErr) {
+              done(webpackErr);
               return;
             }
 
@@ -100,9 +100,11 @@ module.exports = (grunt) => {
             keepalive = keepalive || opts.keepalive;
 
             if (!keepalive) {
-              compilerClosePromises.push(new Promise((resolve, reject) =>
-                compiler.close((err) => err ? reject(err) : resolve())
-              ));
+              compilerClosePromises.push(
+                new Promise((resolve, reject) =>
+                  compiler.close((err) => (err ? reject(err) : resolve())),
+                ),
+              );
               if (--runningTargetCount === 0) {
                 Promise.all(compilerClosePromises)
                   .then(() => done())
