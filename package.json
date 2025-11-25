@@ -6,7 +6,10 @@
   "author": {
     "name": "Tobias Koppers @sokra"
   },
-  "repository": "webpack-contrib/grunt-webpack",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webpack-contrib/grunt-webpack.git"
+  },
   "bugs": {
     "url": "https://github.com/webpack-contrib/grunt-webpack/issues"
   },
