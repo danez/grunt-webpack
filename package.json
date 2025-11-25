@@ -14,6 +14,8 @@
     "url": "https://github.com/webpack/grunt-webpack/issues"
   },
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest",
     "provenance": true
   },
   "packageManager": "pnpm@10.23.0",
