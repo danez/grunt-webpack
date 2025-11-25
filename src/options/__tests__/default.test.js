@@ -103,7 +103,7 @@ describe("default options", () => {
           [{ options1: 1 }, { options2: 1 }, { options3: 1 }],
           [{ target1: 1 }, { target2: 1 }],
         ),
-      ).toThrowError();
+      ).toThrow();
     });
   });
 });
