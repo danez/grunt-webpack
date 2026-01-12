@@ -11,6 +11,8 @@
   <p>Use Webpack with Grunt.<p>
 </div>
 
+> The repository was moved out of the webpack organisation as decided in a meeting, and now resides under my personal user account.
+
 <h2 align="center">Requirements</h2>
 
 - Version 6 of `grunt-webpack` supports webpack 5 and (optional) `webpack-dev-server` version 5.
