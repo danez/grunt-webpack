@@ -27,7 +27,7 @@ module.exports = (grunt) => {
       if (runningTargetCount === 0) {
         done(
           new Error(
-            "No configuration was found for webpack. For further assistance on how to create the config refer to https://github.com/webpack/grunt-webpack/blob/main/README.md#grunt-webpack",
+            "No configuration was found for webpack. For further assistance on how to create the config refer to https://github.com/danez/grunt-webpack/blob/main/README.md#grunt-webpack",
           ),
         );
         return;

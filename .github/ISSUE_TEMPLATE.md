@@ -1,10 +1,7 @@
 <!---
 BEFORE YOU SUBMIT please read the following:
 
-If you have a support request or question please submit them to one of this resources:
-
-* Gitter: https://gitter.im/webpack/grunt-webpack
-* StackOverflow: http://stackoverflow.com/questions/tagged/webpack+gruntjs using the tags `[webpack]` and `[gruntjs]`
+If you have a support request or question please open a discussion instead
 
 Issues on github are only related to problems of grunt-webpack itself and we cannot answer
 support questions here.
