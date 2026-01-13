@@ -44,8 +44,8 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/core": "7.28.5",
-    "@babel/preset-env": "7.28.5",
+    "@babel/core": "7.28.6",
+    "@babel/preset-env": "7.28.6",
     "babel-loader": "9.2.1",
     "eslint": "8.57.1",
     "eslint-config-prettier": "8.10.2",
