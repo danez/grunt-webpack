@@ -58,7 +58,7 @@
     "jest": "30.2.0",
     "prettier": "3.7.4",
     "webpack": "5.103.0",
-    "webpack-dev-server": "5.2.2"
+    "webpack-dev-server": "5.2.3"
   },
   "dependencies": {
     "deep-for-each": "^3.0.0",
