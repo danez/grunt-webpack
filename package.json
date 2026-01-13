@@ -46,7 +46,7 @@
   "devDependencies": {
     "@babel/core": "7.28.6",
     "@babel/preset-env": "7.28.6",
-    "babel-loader": "9.2.1",
+    "babel-loader": "10.0.0",
     "eslint": "8.57.1",
     "eslint-config-prettier": "8.10.2",
     "eslint-config-webpack": "1.2.5",
