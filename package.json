@@ -51,7 +51,7 @@
     "eslint-config-prettier": "8.10.2",
     "eslint-config-webpack": "1.2.5",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-prettier": "5.5.4",
+    "eslint-plugin-prettier": "5.5.5",
     "fast-glob": "3.3.3",
     "fs-extra": "11.3.3",
     "grunt": "1.6.1",
