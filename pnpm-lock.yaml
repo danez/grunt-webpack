@@ -28,8 +28,8 @@ importers:
         specifier: 8.57.1
         version: 8.57.1
       eslint-config-prettier:
-        specifier: 8.10.2
-        version: 8.10.2(eslint@8.57.1)
+        specifier: 10.1.8
+        version: 10.1.8(eslint@8.57.1)
       eslint-config-webpack:
         specifier: 1.2.5
         version: 1.2.5(eslint@8.57.1)
@@ -38,7 +38,7 @@ importers:
         version: 2.32.0(eslint@8.57.1)
       eslint-plugin-prettier:
         specifier: 5.5.5
-        version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@8.10.2(eslint@8.57.1))(eslint@8.57.1)(prettier@3.8.0)
+        version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@8.57.1))(eslint@8.57.1)(prettier@3.8.0)
       fast-glob:
         specifier: 3.3.3
         version: 3.3.3
@@ -1769,8 +1769,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-prettier@8.10.2:
-    resolution: {integrity: sha512-/IGJ6+Dka158JnP5n5YFMOszjDWrXggGz1LaK/guZq9vZTmniaKlHcsscvkAhn9y4U+BU3JuUdYvtAMcv30y4A==}
+  eslint-config-prettier@10.1.8:
+    resolution: {integrity: sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -5948,7 +5948,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-prettier@8.10.2(eslint@8.57.1):
+  eslint-config-prettier@10.1.8(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
 
@@ -6000,7 +6000,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-prettier@5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@8.10.2(eslint@8.57.1))(eslint@8.57.1)(prettier@3.8.0):
+  eslint-plugin-prettier@5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@8.57.1))(eslint@8.57.1)(prettier@3.8.0):
     dependencies:
       eslint: 8.57.1
       prettier: 3.8.0
@@ -6008,7 +6008,7 @@ snapshots:
       synckit: 0.11.12
     optionalDependencies:
       '@types/eslint': 9.6.1
-      eslint-config-prettier: 8.10.2(eslint@8.57.1)
+      eslint-config-prettier: 10.1.8(eslint@8.57.1)
 
   eslint-scope@5.1.1:
     dependencies:
