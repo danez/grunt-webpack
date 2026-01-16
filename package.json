@@ -48,7 +48,7 @@
     "@babel/preset-env": "7.28.6",
     "babel-loader": "10.0.0",
     "eslint": "8.57.1",
-    "eslint-config-prettier": "8.10.2",
+    "eslint-config-prettier": "10.1.8",
     "eslint-config-webpack": "1.2.5",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-prettier": "5.5.5",
