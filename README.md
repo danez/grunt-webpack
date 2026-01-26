@@ -21,7 +21,7 @@
 
 <h2 align="center">Install</h2>
 
-Install this grunt plugin next to your project's [Gruntfile.js](http://gruntjs.com/getting-started). You also need to install webpack yourself, this grunt plugin does not install webpack itself.
+Install this grunt plugin next to your project's [Gruntfile.js](http://gruntjs.com/getting-started). You also need to install webpack yourself, this grunt plugin does not install webpack itself. This is the official repo for the npm package `grunt-webpack`.
 
 ```bash
 npm install webpack grunt-webpack --save-dev
