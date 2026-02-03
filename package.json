@@ -57,7 +57,7 @@
     "grunt": "1.6.1",
     "jest": "30.2.0",
     "prettier": "3.8.1",
-    "webpack": "5.104.1",
+    "webpack": "5.105.0",
     "webpack-dev-server": "5.2.3"
   },
   "dependencies": {
