@@ -18,7 +18,7 @@
     "tag": "latest",
     "provenance": true
   },
-  "packageManager": "pnpm@10.29.1",
+  "packageManager": "pnpm@10.29.2",
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/webpack"
