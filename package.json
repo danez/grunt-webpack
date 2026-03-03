@@ -53,7 +53,7 @@
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-prettier": "5.5.5",
     "fast-glob": "3.3.3",
-    "fs-extra": "11.3.3",
+    "fs-extra": "11.3.4",
     "grunt": "1.6.1",
     "jest": "30.2.0",
     "prettier": "3.8.1",
