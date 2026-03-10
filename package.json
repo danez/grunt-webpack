@@ -55,7 +55,7 @@
     "fast-glob": "3.3.3",
     "fs-extra": "11.3.4",
     "grunt": "1.6.1",
-    "jest": "30.2.0",
+    "jest": "30.3.0",
     "prettier": "3.8.1",
     "webpack": "5.105.4",
     "webpack-dev-server": "5.2.3"
