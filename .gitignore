@@ -1,5 +1,5 @@
 .nyc_output
 coverage
-node_modules
+/node_modules
 npm-debug.log
 tests/integration/tmp
