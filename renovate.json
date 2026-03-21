@@ -1,7 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["dependencies"],
-  "extends": ["config:recommended", ":pinOnlyDevDependencies"],
+  "extends": [
+    "config:recommended",
+    ":pinOnlyDevDependencies",
+    "helpers:pinGitHubActionDigests"
+  ],
   "enabled": true,
   "lockFileMaintenance": {
     "enabled": true,

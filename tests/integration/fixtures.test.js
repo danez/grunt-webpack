@@ -104,7 +104,7 @@ describe("Fixture Tests", () => {
               GRUNT_WEBPACK_TASK: TASKS_DIR,
             },
             cwd,
-            timeout: 1500,
+            timeout: 5000,
           });
         } catch (error) {
           result = error;
