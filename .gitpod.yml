@@ -1,6 +1,0 @@
-tasks:
-  - init: pnpm install
-vscode:
-  extensions:
-    - dbaeumer.vscode-eslint
-    - esbenp.prettier-vscode

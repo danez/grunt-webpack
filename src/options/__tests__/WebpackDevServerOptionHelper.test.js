@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import WebpackDevServerOptionHelper from "../WebpackDevServerOptionHelper";
 
 describe("WebpackDevServerOptionHelper", () => {

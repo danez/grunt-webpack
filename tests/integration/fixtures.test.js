@@ -1,63 +1,41 @@
-import path from "path";
-import crypto from "crypto";
-import { transform } from "@babel/core";
-import envPreset from "@babel/preset-env";
+import path from "node:path";
+import crypto from "node:crypto";
+import { cp, rm, mkdir, readFile } from "node:fs/promises";
 import fs from "fs-extra";
 import glob from "fast-glob";
-import { spawn } from "child_process";
 import assertGruntFactory from "../utils/assertGrunt";
+import { afterAll, beforeEach, describe, expect, test } from "vitest";
+import { execa } from "execa";
 
 const TMP_DIRECTORY = path.join(__dirname, "tmp");
 const GRUNT_BIN = path.join(__dirname, "../../node_modules/.bin/grunt");
+const TASKS_DIR = path.join(__dirname, "../../tasks");
 
-const files = glob.sync(path.join(__dirname, "fixtures/**/Gruntfile.js"), {
+const files = glob.sync(path.join(__dirname, "__fixtures__/**/Gruntfile.js"), {
   dot: true,
 });
 const tests = new Map();
-
-async function fileExists(filename) {
-  try {
-      await fs.promises.access(filename);
-      return true;
-  } catch (err) {
-      if (err.code === 'ENOENT') {
-          return false;
-      } else {
-          throw err;
-      }
-  }
-}
 
 function runExec(code, opts) {
   const sandbox = Object.assign(
     {
       fs,
       path,
-      assertGrunt: assertGruntFactory(
-        opts.returnCode,
-        opts.stdout,
-        opts.timeout,
-      ),
+      assertGrunt: assertGruntFactory(opts.failed, opts.stdout, opts.timeout),
+      expect,
     },
     opts,
   );
 
-  const execCode = transform(code, {
-    ast: false,
-    sourceMaps: false,
-    compact: true,
-    comments: false,
-    presets: [[envPreset, { targets: { node: "current" } }]],
-  }).code;
+  const fn = new Function(...Object.keys(sandbox), code);
 
-  let fn = new Function(...Object.keys(sandbox), execCode);
   return fn.apply(null, Object.values(sandbox));
 }
 
 files.forEach((file) => {
   const directory = path.dirname(file);
   const relativeDirectory = path.relative(
-    path.join(__dirname, "fixtures"),
+    path.join(__dirname, "__fixtures__"),
     directory,
   );
   const name = relativeDirectory.replace(/\//g, " ");
@@ -66,34 +44,32 @@ files.forEach((file) => {
 });
 
 describe("Fixture Tests", () => {
-  let cwd;
-  beforeEach(async () => {
-    cwd = path.join(
+  beforeEach(async (context) => {
+    context.cwd = path.join(
       TMP_DIRECTORY,
-      "integration",
       crypto.randomBytes(20).toString("hex"),
     );
-    await fs.ensureDir(cwd);
+    await mkdir(context.cwd, { recursive: true });
   });
-  afterEach(async () => {
-    await fs.remove(cwd);
-    cwd = null;
-  });
+
   afterAll(async () => {
-    await fs.remove(TMP_DIRECTORY);
+    await rm(TMP_DIRECTORY, { recursive: true, force: true });
   });
 
   tests.forEach(({ directory, relativeDirectory }, name) => {
     const directoryParts = relativeDirectory.split("/");
-    const testFunc = directoryParts.pop().startsWith(".") ? test.skip : test;
+    const testFunc = directoryParts.pop().startsWith(".")
+      ? test.skip
+      : test.concurrent;
 
     testFunc(
       name,
-      async () => {
-        await fs.copy(directory, cwd);
-        let optionsLoc = path.join(cwd, "options.json");
+      async ({ cwd }) => {
+        await cp(directory, cwd, { recursive: true });
+        const optionsLoc = path.join(cwd, "options.json");
         let options;
-        if (await fileExists(optionsLoc)) {
+
+        if (await fs.exists(optionsLoc)) {
           options = require(optionsLoc);
         } else {
           options = {
@@ -105,40 +81,43 @@ describe("Fixture Tests", () => {
 
         const execLoc = path.join(cwd, "exec.js");
         let execCode;
-        if (await fileExists(execLoc)) {
-          execCode = await fs.readFile(execLoc, "utf-8");
+
+        if (await fs.exists(execLoc)) {
+          execCode = await readFile(execLoc, "utf-8");
         }
-        const grunt = spawn(GRUNT_BIN, options.args, { cwd });
+        let result;
 
-        let stdout = "";
-        let stderr = "";
-        grunt.stdout.on("data", (data) => {
-          stdout += data.toString();
-        });
-        grunt.stderr.on("data", (data) => {
-          stderr += data.toString();
-        });
-
-        return new Promise((resolve) => {
-          const timeout = setTimeout(() => {
-            grunt.removeAllListeners();
-            const killed = grunt.kill();
-            if (!killed) console.error("cannot kill grunt");
-            finish({ timeout: true });
-          }, 3000);
-
-          const finish = (result) => {
-            clearTimeout(timeout);
-            if (execCode) runExec(execCode, { cwd, stderr, stdout, ...result });
-            resolve();
-          };
-
-          grunt.on("close", (returnCode) => {
-            finish({ returnCode, timeout: false });
+        try {
+          result = await execa(GRUNT_BIN, options.args, {
+            env: {
+              GRUNT_WEBPACK_TASK: TASKS_DIR,
+            },
+            cwd,
+            timeout: 5000,
           });
-        });
+        } catch (error) {
+          result = error;
+        }
+
+        const { stdout, stderr, timedOut, failed } = result;
+
+        if (execCode) {
+          try {
+            runExec(execCode, {
+              cwd,
+              stderr,
+              stdout,
+              failed,
+              timeout: timedOut,
+            });
+          } catch (error) {
+            // eslint-disable-next-line no-console
+            console.log(stdout, stderr);
+            throw error;
+          }
+        }
       },
-      10000,
+      15000,
     );
   });
 });

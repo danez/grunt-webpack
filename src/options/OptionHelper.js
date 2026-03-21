@@ -55,8 +55,10 @@ class OptionHelper {
 
     if (Array.isArray(options)) {
       let value;
+
       options.some((opt) => {
         value = opt[name];
+
         return value != null;
       });
 
@@ -89,6 +91,7 @@ class OptionHelper {
 
   filterGruntOptions(options) {
     const result = Object.assign({}, options);
+
     Object.keys(defaults.gruntOptions).forEach((key) => delete result[key]);
 
     return result;

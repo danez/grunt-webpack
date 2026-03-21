@@ -47,6 +47,7 @@ function mergeOptions(defaultOptions, options, targetOptions) {
           "If using arrays for both please ensure they are the same size.",
       );
     }
+
     return targetOptions.map((opt, index) =>
       merge(defaultOptions, options[index], opt),
     );

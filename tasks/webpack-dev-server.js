@@ -6,10 +6,10 @@ const ProgressPluginFactory = require("../src/plugins/ProgressPluginFactory");
 
 module.exports = (grunt) => {
   let WebpackDevServer;
+
   try {
-    // eslint-disable-next-line import/no-extraneous-dependencies
     WebpackDevServer = require("webpack-dev-server");
-  } catch (err) {
+  } catch {
     grunt.registerTask(
       "webpack-dev-server",
       "webpack-dev-server not installed.",
@@ -24,6 +24,7 @@ or similar with you favorite package manager.
         );
       },
     );
+
     return;
   }
 
@@ -36,10 +37,12 @@ or similar with you favorite package manager.
       const done = this.async();
 
       let targets;
+
       if (cliTarget) {
         targets = [cliTarget];
       } else {
         const config = grunt.config.getRaw([this.name]);
+
         targets = config ? Object.keys(config) : [];
       }
 
@@ -51,21 +54,25 @@ or similar with you favorite package manager.
             "No configuration was found for webpack-dev-server. For further assistance on how to create the config refer to https://github.com/danez/grunt-webpack/blob/main/README.md#grunt-webpack",
           ),
         );
+
         return;
       }
 
       targets.forEach((target) => {
         if (target === "options") {
           runningTargetCount--;
+
           return;
         }
 
         const optionHelper = new OptionHelper(grunt, this.name, target);
+
         optionHelper.preloadOptions(() => {
           const opts = optionHelper.getOptions();
           const webpackOptions = optionHelper.getWebpackOptions();
 
           const compiler = webpack(webpackOptions);
+
           if (opts.progress) {
             processPluginFactory.addPlugin(compiler, webpackOptions);
           }

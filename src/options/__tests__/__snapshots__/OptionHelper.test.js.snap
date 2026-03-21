@@ -1,12 +1,12 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`OptionHelper supports Promise as options 1`] = `
+exports[`OptionHelper > supports Promise as options 1`] = `
 {
   "mode": "production",
 }
 `;
 
-exports[`OptionHelper supports functions as options 1`] = `
+exports[`OptionHelper > supports functions as options 1`] = `
 {
   "mode": "production",
 }

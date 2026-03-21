@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`default options mergeOptions all single objects 1`] = `
+exports[`default options > mergeOptions > all single objects 1`] = `
 {
   "default": 1,
   "options": 1,
@@ -8,7 +8,7 @@ exports[`default options mergeOptions all single objects 1`] = `
 }
 `;
 
-exports[`default options mergeOptions merges sub arrays 1`] = `
+exports[`default options > mergeOptions > merges sub arrays 1`] = `
 {
   "array": [
     1,
@@ -18,7 +18,7 @@ exports[`default options mergeOptions merges sub arrays 1`] = `
 }
 `;
 
-exports[`default options mergeOptions options and target as array 1`] = `
+exports[`default options > mergeOptions > options and target as array 1`] = `
 [
   {
     "default": 1,
@@ -33,7 +33,7 @@ exports[`default options mergeOptions options and target as array 1`] = `
 ]
 `;
 
-exports[`default options mergeOptions options as array 1`] = `
+exports[`default options > mergeOptions > options as array 1`] = `
 [
   {
     "default": 1,
@@ -48,7 +48,7 @@ exports[`default options mergeOptions options as array 1`] = `
 ]
 `;
 
-exports[`default options mergeOptions target as array 1`] = `
+exports[`default options > mergeOptions > target as array 1`] = `
 [
   {
     "default": 1,

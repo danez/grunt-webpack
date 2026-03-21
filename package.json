@@ -4,8 +4,11 @@
   "version": "7.0.1",
   "homepage": "https://github.com/danez/grunt-webpack",
   "author": {
-    "name": "Tobias Koppers @sokra"
+    "name": "Tobias Koppers (http://github.com/sokra)"
   },
+  "contributors": [
+    "Daniel Tschinder (http://github.com/danez)"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danez/grunt-webpack.git"
@@ -13,16 +16,16 @@
   "bugs": {
     "url": "https://github.com/danez/grunt-webpack/issues"
   },
+  "license": "MIT",
+  "keywords": [
+    "gruntplugin",
+    "webpack",
+    "grunt"
+  ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "tag": "latest",
     "provenance": true
   },
   "packageManager": "pnpm@10.32.1",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/webpack"
-  },
   "engines": {
     "node": ">=18.19.0"
   },
@@ -30,33 +33,25 @@
     "src",
     "tasks"
   ],
-  "peerDependencies": {
-    "webpack": "^5.0.0"
-  },
-  "license": "MIT",
-  "keywords": [
-    "gruntplugin",
-    "webpack",
-    "grunt"
-  ],
   "scripts": {
-    "lint": "eslint ./src ./tasks --report-unused-disable-directives",
-    "test": "jest"
+    "lint": "eslint --report-unused-disable-directives .",
+    "test": "vitest run"
   },
   "devDependencies": {
-    "@babel/core": "7.29.0",
-    "@babel/preset-env": "7.29.2",
-    "babel-loader": "10.1.1",
-    "eslint": "8.57.1",
+    "@eslint/js": "9.39.4",
+    "@vitest/coverage-v8": "4.1.0",
+    "eslint": "9.39.4",
     "eslint-config-prettier": "10.1.8",
-    "eslint-config-webpack": "1.2.5",
-    "eslint-plugin-import": "2.32.0",
+    "eslint-config-webpack": "4.9.3",
     "eslint-plugin-prettier": "5.5.5",
+    "execa": "9.6.1",
     "fast-glob": "3.3.3",
     "fs-extra": "11.3.4",
+    "globals": "17.4.0",
     "grunt": "1.6.1",
-    "jest": "30.3.0",
     "prettier": "3.8.1",
+    "vite": "7.3.1",
+    "vitest": "4.1.0",
     "webpack": "5.105.4",
     "webpack-dev-server": "5.2.3"
   },
@@ -64,10 +59,12 @@
     "deep-for-each": "^3.0.0",
     "webpack-merge": "^6.0.1"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.js",
-      "tasks/**/*.js"
-    ]
+  "peerDependencies": {
+    "webpack": "^5.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "grunt>minimatch": "10.2.4"
+    }
   }
 }
