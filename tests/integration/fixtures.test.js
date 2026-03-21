@@ -1,16 +1,10 @@
 import path from "node:path";
 import crypto from "node:crypto";
+import { cp, rm, mkdir, readFile } from "node:fs/promises";
 import fs from "fs-extra";
 import glob from "fast-glob";
 import assertGruntFactory from "../utils/assertGrunt";
-import {
-  afterAll,
-  afterEach,
-  beforeEach,
-  describe,
-  expect,
-  test,
-} from "vitest";
+import { afterAll, beforeEach, describe, expect, test } from "vitest";
 import { execa } from "execa";
 
 const TMP_DIRECTORY = path.join(__dirname, "tmp");
@@ -53,18 +47,13 @@ describe("Fixture Tests", () => {
   beforeEach(async (context) => {
     context.cwd = path.join(
       TMP_DIRECTORY,
-      "integration",
       crypto.randomBytes(20).toString("hex"),
     );
-    await fs.ensureDir(context.cwd);
-  });
-
-  afterEach(async (context) => {
-    await fs.remove(context.cwd);
+    await mkdir(context.cwd, { recursive: true });
   });
 
   afterAll(async () => {
-    await fs.remove(TMP_DIRECTORY);
+    await rm(TMP_DIRECTORY, { recursive: true, force: true });
   });
 
   tests.forEach(({ directory, relativeDirectory }, name) => {
@@ -76,7 +65,7 @@ describe("Fixture Tests", () => {
     testFunc(
       name,
       async ({ cwd }) => {
-        await fs.copy(directory, cwd);
+        await cp(directory, cwd, { recursive: true });
         const optionsLoc = path.join(cwd, "options.json");
         let options;
 
@@ -94,7 +83,7 @@ describe("Fixture Tests", () => {
         let execCode;
 
         if (await fs.exists(execLoc)) {
-          execCode = await fs.readFile(execLoc, "utf-8");
+          execCode = await readFile(execLoc, "utf-8");
         }
         let result;
 
