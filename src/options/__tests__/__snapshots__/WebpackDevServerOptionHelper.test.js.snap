@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`WebpackDevServerOptionHelper host is localhost by default 1`] = `
+exports[`WebpackDevServerOptionHelper > host is localhost by default 1`] = `
 {
   "devServer": {
     "host": "localhost",
@@ -13,13 +13,13 @@ exports[`WebpackDevServerOptionHelper host is localhost by default 1`] = `
 }
 `;
 
-exports[`WebpackDevServerOptionHelper host is localhost by default 2`] = `
+exports[`WebpackDevServerOptionHelper > host is localhost by default 2`] = `
 {
   "host": "localhost",
 }
 `;
 
-exports[`WebpackDevServerOptionHelper supports array config for webpack 1`] = `
+exports[`WebpackDevServerOptionHelper > supports array config for webpack 1`] = `
 [
   {
     "devServer": {
@@ -34,7 +34,7 @@ exports[`WebpackDevServerOptionHelper supports array config for webpack 1`] = `
 ]
 `;
 
-exports[`WebpackDevServerOptionHelper supports array config for webpack 2`] = `
+exports[`WebpackDevServerOptionHelper > supports array config for webpack 2`] = `
 {
   "port": 9090,
 }

@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import { gruntOptions, mergeOptions } from "../default";
 
 describe("default options", () => {
@@ -103,7 +104,9 @@ describe("default options", () => {
           [{ options1: 1 }, { options2: 1 }, { options3: 1 }],
           [{ target1: 1 }, { target2: 1 }],
         ),
-      ).toThrow();
+      ).toThrow(
+        "If using arrays for both please ensure they are the same size",
+      );
     });
   });
 });

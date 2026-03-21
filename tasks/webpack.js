@@ -15,10 +15,12 @@ module.exports = (grunt) => {
       const done = this.async();
 
       let targets;
+
       if (cliTarget) {
         targets = [cliTarget];
       } else {
         const config = grunt.config.getRaw([this.name]);
+
         targets = config ? Object.keys(config) : [];
       }
       let runningTargetCount = targets.length;
@@ -30,6 +32,7 @@ module.exports = (grunt) => {
             "No configuration was found for webpack. For further assistance on how to create the config refer to https://github.com/danez/grunt-webpack/blob/main/README.md#grunt-webpack",
           ),
         );
+
         return;
       }
 
@@ -38,6 +41,7 @@ module.exports = (grunt) => {
       targets.forEach((target) => {
         if (target === "options") {
           runningTargetCount--;
+
           return;
         }
 
@@ -66,6 +70,7 @@ module.exports = (grunt) => {
           const handler = (webpackErr, stats) => {
             if (webpackErr) {
               done(webpackErr);
+
               return;
             }
 
@@ -91,8 +96,10 @@ module.exports = (grunt) => {
               if (opts.failOnError) {
                 // construct error without stacktrace, as the stack is not relevant here
                 const error = new Error();
+
                 error.stack = null;
                 done(error);
+
                 return;
               }
             }
