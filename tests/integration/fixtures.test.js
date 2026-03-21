@@ -113,13 +113,19 @@ describe("Fixture Tests", () => {
         const { stdout, stderr, timedOut, failed } = result;
 
         if (execCode) {
-          runExec(execCode, {
-            cwd,
-            stderr,
-            stdout,
-            failed,
-            timeout: timedOut,
-          });
+          try {
+            runExec(execCode, {
+              cwd,
+              stderr,
+              stdout,
+              failed,
+              timeout: timedOut,
+            });
+          } catch (error) {
+            // eslint-disable-next-line no-console
+            console.log(stdout, stderr);
+            throw error;
+          }
         }
       },
       15000,
