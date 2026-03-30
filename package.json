@@ -64,7 +64,7 @@
   },
   "pnpm": {
     "overrides": {
-      "grunt>minimatch": "10.2.4"
+      "grunt>minimatch": "10.2.5"
     }
   }
 }
