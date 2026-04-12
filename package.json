@@ -47,7 +47,7 @@
     "execa": "9.6.1",
     "fast-glob": "3.3.3",
     "fs-extra": "11.3.4",
-    "globals": "17.4.0",
+    "globals": "17.5.0",
     "grunt": "1.6.1",
     "prettier": "3.8.2",
     "vite": "7.3.2",
