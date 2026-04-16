@@ -49,8 +49,8 @@ importers:
         specifier: 17.5.0
         version: 17.5.0
       grunt:
-        specifier: 1.6.1
-        version: 1.6.1
+        specifier: 1.6.2
+        version: 1.6.2
       prettier:
         specifier: 3.8.2
         version: 3.8.2
@@ -1949,8 +1949,8 @@ packages:
     resolution: {integrity: sha512-2bQiD4fzXqX8rhNdXkAywCadeqiPiay0oQny77wA2F3WF4grPJXCvAcyoWUJV+po/b15glGkxuSiQCK299UC2w==}
     engines: {node: '>=10'}
 
-  grunt@1.6.1:
-    resolution: {integrity: sha512-/ABUy3gYWu5iBmrUSRBP97JLpQUm0GgVveDCp6t3yRNIoltIYw7rEj3g5y1o2PGPR2vfTRGa7WC/LZHLTXnEzA==}
+  grunt@1.6.2:
+    resolution: {integrity: sha512-bUzh5nA/P5L66ihXTDP6J5BGnMB/8lXJXejYWSbH4Y4TvWM9t2S39sggQDYYQlx06cYcCsmu63HMYHGCIzUVfg==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -2636,12 +2636,13 @@ packages:
   node-releases@2.0.37:
     resolution: {integrity: sha512-1h5gKZCF+pO/o3Iqt5Jp7wc9rH3eJJ0+nh/CIoiRwjRxde/hAHyLPXYN4V3CqKAbiZPSeJFSWHmJsbkicta0Eg==}
 
-  nopt@3.0.6:
-    resolution: {integrity: sha512-4GUt3kSEYmk4ITxzB/b9vaIDfUVWN/Ml1Fwl11IlnIG2iaJ9O6WXZ9SrYM9NLI8OCBieN2Y8SWC2oJV0RQ7qYg==}
-    hasBin: true
-
   nopt@4.0.3:
     resolution: {integrity: sha512-CvaGwVMztSMJLOeXPrez7fyfObdZqNUK1cPAEzLHrTybIua9pMdmmPR5YwtfNftIOMv3DPUhFaxsZMNTQO20Kg==}
+    hasBin: true
+
+  nopt@5.0.0:
+    resolution: {integrity: sha512-Tbj67rffqceeLpcRXrT7vKAN8CwfPeIBgM7E6iBkmKLV7bEMwpGgYLGv0jACUsECaa/vuxP0IjEont6umdMgtQ==}
+    engines: {node: '>=6'}
     hasBin: true
 
   normalize-path@3.0.0:
@@ -5774,7 +5775,7 @@ snapshots:
       underscore.string: 3.3.6
       which: 2.0.2
 
-  grunt@1.6.1:
+  grunt@1.6.2:
     dependencies:
       dateformat: 4.6.3
       eventemitter2: 0.4.14
@@ -5788,7 +5789,7 @@ snapshots:
       iconv-lite: 0.6.3
       js-yaml: 3.14.2
       minimatch: 10.2.5
-      nopt: 3.0.6
+      nopt: 5.0.0
 
   handle-thing@2.0.1: {}
 
@@ -6651,14 +6652,14 @@ snapshots:
 
   node-releases@2.0.37: {}
 
-  nopt@3.0.6:
-    dependencies:
-      abbrev: 1.1.1
-
   nopt@4.0.3:
     dependencies:
       abbrev: 1.1.1
       osenv: 0.1.5
+
+  nopt@5.0.0:
+    dependencies:
+      abbrev: 1.1.1
 
   normalize-path@3.0.0: {}
 
