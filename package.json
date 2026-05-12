@@ -25,7 +25,7 @@
   "publishConfig": {
     "provenance": true
   },
-  "packageManager": "pnpm@11.1.0",
+  "packageManager": "pnpm@11.1.1",
   "engines": {
     "node": ">=18.19.0"
   },
