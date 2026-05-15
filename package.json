@@ -42,7 +42,7 @@
     "@vitest/coverage-v8": "4.1.6",
     "eslint": "10.3.0",
     "eslint-config-prettier": "10.1.8",
-    "eslint-config-webpack": "4.9.5",
+    "eslint-config-webpack": "4.9.6",
     "eslint-plugin-prettier": "5.5.5",
     "execa": "9.6.1",
     "fast-glob": "3.3.3",
