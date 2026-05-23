@@ -4,7 +4,12 @@ import js from "@eslint/js";
 import prettierRecommended from "eslint-plugin-prettier/recommended";
 
 export default defineConfig([
-  globalIgnores(["**/coverage", "**/node_modules", "**/__fixtures__"]),
+  globalIgnores([
+    "**/coverage",
+    "**/node_modules",
+    "**/__fixtures__",
+    "**/tmp",
+  ]),
   js.configs.recommended,
   {
     languageOptions: {

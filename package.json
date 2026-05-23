@@ -27,7 +27,7 @@
   },
   "packageManager": "pnpm@11.1.3",
   "engines": {
-    "node": ">=18.19.0"
+    "node": "^22.13.0 || >=24"
   },
   "files": [
     "src",
@@ -61,10 +61,5 @@
   },
   "peerDependencies": {
     "webpack": "^5.0.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "grunt>minimatch": "10.2.5"
-    }
   }
 }
