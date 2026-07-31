@@ -52,7 +52,7 @@
     "prettier": "3.9.6",
     "vite": "8.1.5",
     "vitest": "4.1.10",
-    "webpack": "5.109.1",
+    "webpack": "5.109.2",
     "webpack-dev-server": "5.2.6"
   },
   "dependencies": {
