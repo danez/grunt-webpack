@@ -48,7 +48,7 @@
     "fast-glob": "3.3.3",
     "fs-extra": "11.4.0",
     "globals": "17.8.0",
-    "grunt": "1.6.2",
+    "grunt": "1.6.3",
     "prettier": "3.9.6",
     "vite": "8.1.5",
     "vitest": "4.1.10",
