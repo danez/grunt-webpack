@@ -12,12 +12,12 @@ We will backport security fixes if needed to the last 4 previous major versions.
 
 | Version | Supported          |
 | ------- | ------------------ |
+| [v8](https://github.com/danez/grunt-webpack/releases) | :white_check_mark: |
 | [v7](https://github.com/danez/grunt-webpack/releases) | :white_check_mark: |
 | [v6](https://github.com/danez/grunt-webpack/releases) | :white_check_mark: |
 | [v5](https://github.com/danez/grunt-webpack/releases) | :white_check_mark: |
 | [v4](https://github.com/danez/grunt-webpack/releases) | :white_check_mark: |
-| [v3](https://github.com/danez/grunt-webpack/releases) | :white_check_mark: |
-| v2 or older   | :x:                |
+| v3 or older   | :x:                |
 
 ## Reporting a Vulnerability
 
