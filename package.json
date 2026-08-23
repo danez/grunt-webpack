@@ -50,7 +50,7 @@
     "globals": "17.11.0",
     "grunt": "1.6.3",
     "prettier": "3.9.6",
-    "vite": "8.2.1",
+    "vite": "8.2.2",
     "vitest": "4.1.11",
     "webpack": "5.109.2",
     "webpack-dev-server": "6.0.0"
