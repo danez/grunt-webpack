@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@vitest/coverage-v8": "4.1.11",
+    "@vitest/coverage-v8": "5.0.0",
     "eslint": "10.10.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-config-webpack": "4.9.6",
@@ -51,7 +51,7 @@
     "grunt": "1.6.3",
     "prettier": "3.9.6",
     "vite": "8.2.2",
-    "vitest": "4.1.11",
+    "vitest": "5.0.0",
     "webpack": "5.110.3",
     "webpack-dev-server": "6.0.0"
   },
