@@ -9,6 +9,9 @@ on:
 
 permissions: {}
 
+env:
+  NODE_VERSION: 24
+
 jobs:
   tests:
     name: Unit tests
@@ -34,8 +37,18 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Tests with coverage
+        if: "${{ matrix.node == env.NODE_VERSION }}"
+        run: pnpm test -- --coverage
+
       - name: Tests
+        if: "${{ matrix.node != env.NODE_VERSION }}"
         run: pnpm test
+
+      - name: Upload coverage
+        if: "${{ matrix.node == env.NODE_VERSION }}"
+        continue-on-error: true
+        uses: coverallsapp/github-action@8d6379e14d29928660c4ba802d8e85393440b329 # v2
 
   lint:
     name: Lint
