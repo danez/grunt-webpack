@@ -49,7 +49,7 @@
     "fs-extra": "11.4.1",
     "globals": "17.12.0",
     "grunt": "1.6.3",
-    "prettier": "3.9.8",
+    "prettier": "3.9.9",
     "vite": "8.3.0",
     "vitest": "5.0.1",
     "webpack": "5.111.1",
