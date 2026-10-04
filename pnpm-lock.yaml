@@ -201,8 +201,8 @@ importers:
         specifier: 11.4.1
         version: 11.4.1
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       grunt:
         specifier: 1.6.3
         version: 1.6.3
@@ -1842,8 +1842,8 @@ packages:
     resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
     engines: {node: '>=18'}
 
-  globals@17.12.0:
-    resolution: {integrity: sha512-cezEd/DTyyht9cvSSURyygXPfy04GtWO/5e6ZPvH7fCtjKz9PYOmuawphw1Ctd1f6C+5JypXfGD7ahNMXvevBA==}
+  globals@17.13.0:
+    resolution: {integrity: sha512-RwMTC61u7hrG3ZJMkZQOK4JLJrKS8QtoTii63EmWvFXHqycY9FObBJQCbsLxSO8kjKhWE5kV1GC+Vb1g3RI0Zg==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -4945,7 +4945,7 @@ snapshots:
       eslint-plugin-react: 7.37.5(eslint@10.11.0(supports-color@8.1.1))
       eslint-plugin-react-hooks: 7.1.1(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)
       eslint-plugin-unicorn: 64.0.0(eslint@10.11.0(supports-color@8.1.1))
-      globals: 17.12.0
+      globals: 17.13.0
       jsonc-eslint-parser: 3.3.0
       semver: 7.8.5
       sort-package-json: 4.0.0
@@ -5113,7 +5113,7 @@ snapshots:
       core-js-compat: 3.50.0
       eslint: 10.11.0(supports-color@8.1.1)
       find-up-simple: 1.0.1
-      globals: 17.12.0
+      globals: 17.13.0
       indent-string: 5.0.0
       is-builtin-module: 5.0.0
       jsesc: 3.1.0
@@ -5484,7 +5484,7 @@ snapshots:
 
   globals@15.15.0: {}
 
-  globals@17.12.0: {}
+  globals@17.13.0: {}
 
   globalthis@1.0.4:
     dependencies:
