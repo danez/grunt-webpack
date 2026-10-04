@@ -186,8 +186,8 @@ importers:
         specifier: 10.1.8
         version: 10.1.8(eslint@10.11.0(supports-color@8.1.1))
       eslint-config-webpack:
-        specifier: 4.14.0
-        version: 4.14.0(@typescript-eslint/eslint-plugin@8.70.1(@typescript-eslint/parser@8.70.1(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(@typescript-eslint/parser@8.70.1(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.11.0(supports-color@8.1.1))(prettier@3.9.9)(supports-color@8.1.1)(typescript@6.0.3)
+        specifier: 4.15.0
+        version: 4.15.0(@typescript-eslint/eslint-plugin@8.70.1(@typescript-eslint/parser@8.70.1(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(@typescript-eslint/parser@8.70.1(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.11.0(supports-color@8.1.1))(prettier@3.9.9)(supports-color@8.1.1)(typescript@6.0.3)
       eslint-plugin-prettier:
         specifier: 5.5.6
         version: 5.5.6(eslint-config-prettier@10.1.8(eslint@10.11.0(supports-color@8.1.1)))(eslint@10.11.0(supports-color@8.1.1))(prettier@3.9.9)
@@ -1433,8 +1433,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-config-webpack@4.14.0:
-    resolution: {integrity: sha512-CX7Guz0AJefo/4RgpH2JL4kh7Wb49bF9GYo6Q5gOnh5imdI91l7RlWjINPE0oAktWs/Ncl/gAVzTwswK5VKmfQ==}
+  eslint-config-webpack@4.15.0:
+    resolution: {integrity: sha512-kTZFuOA6tF1nlm9HVWXmY6Vt/9VuF9r2HtLuUlFlkBO8RDit240oG9hpngzpANw4fqpN7IP9lCWX/kD2Xx9Olg==}
     engines: {node: '>= 20.9.0'}
     peerDependencies:
       eslint: '>= 9.28.0'
@@ -4929,7 +4929,7 @@ snapshots:
     dependencies:
       eslint: 10.11.0(supports-color@8.1.1)
 
-  eslint-config-webpack@4.14.0(@typescript-eslint/eslint-plugin@8.70.1(@typescript-eslint/parser@8.70.1(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(@typescript-eslint/parser@8.70.1(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.11.0(supports-color@8.1.1))(prettier@3.9.9)(supports-color@8.1.1)(typescript@6.0.3):
+  eslint-config-webpack@4.15.0(@typescript-eslint/eslint-plugin@8.70.1(@typescript-eslint/parser@8.70.1(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(@typescript-eslint/parser@8.70.1(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.11.0(supports-color@8.1.1))(prettier@3.9.9)(supports-color@8.1.1)(typescript@6.0.3):
     dependencies:
       '@eslint/js': 9.39.5
       '@eslint/markdown': 8.0.3(supports-color@8.1.1)
