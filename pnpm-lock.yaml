@@ -216,11 +216,11 @@ importers:
         specifier: 5.0.5
         version: 5.0.5(@types/node@26.6.5)(@vitest/coverage-v8@5.0.5)(vite@8.3.5(@types/node@26.6.5)(terser@5.51.2))
       webpack:
-        specifier: 5.112.1
-        version: 5.112.1(lightningcss@1.33.0)(postcss@8.5.31)
+        specifier: 5.112.2
+        version: 5.112.2(lightningcss@1.33.0)(postcss@8.5.31)
       webpack-dev-server:
         specifier: 6.1.0
-        version: 6.1.0(supports-color@8.1.1)(webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31))
+        version: 6.1.0(supports-color@8.1.1)(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31))
 
 packages:
 
@@ -3450,8 +3450,8 @@ packages:
     resolution: {integrity: sha512-EIMmPVvNI0CYXyRPp34F2Qk7W37/BZVZIofS6LAUnrNjCVahS+hO4mxwFJDjQjODTGZDtVzLYoN2+1dYkhk9qA==}
     engines: {node: '>=10.13.0'}
 
-  webpack@5.112.1:
-    resolution: {integrity: sha512-DsEgOfaY5XrvTTEU7QvktlOpYEipgNUyXQY4rQO4KtFmr71IwjMoRWyv9rJNo6qwqctRzh9sO9VIwMgnWmiBVg==}
+  webpack@5.112.2:
+    resolution: {integrity: sha512-B2tp1LI9D8GVpPDqprdt12ukTkXXahj9MzqSWJq4faSPgOUM7CdZaGAB6HrL/8E6UwbBpdj4vzWDbKoFnVoU6g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -6401,13 +6401,13 @@ snapshots:
 
   minimist@1.2.8: {}
 
-  minimizer-webpack-plugin@5.13.1(lightningcss@1.33.0)(postcss@8.5.31)(webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31)):
+  minimizer-webpack-plugin@5.13.1(lightningcss@1.33.0)(postcss@8.5.31)(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
-      schema-utils: 4.8.1(webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31))
+      schema-utils: 4.8.1(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31))
       terser: 5.51.2
-      webpack: 5.112.1(lightningcss@1.33.0)(postcss@8.5.31)
+      webpack: 5.112.2(lightningcss@1.33.0)(postcss@8.5.31)
     optionalDependencies:
       lightningcss: 1.33.0
       postcss: 8.5.31
@@ -6799,14 +6799,14 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  schema-utils@4.8.1(webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31)):
+  schema-utils@4.8.1(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31)):
     dependencies:
       '@types/json-schema': 7.0.15
       ajv: 8.20.0
       ajv-formats: 3.0.1
       ajv-keywords: 5.1.0(ajv@8.20.0)
     optionalDependencies:
-      webpack: 5.112.1(lightningcss@1.33.0)(postcss@8.5.31)
+      webpack: 5.112.2(lightningcss@1.33.0)(postcss@8.5.31)
 
   selfsigned@5.5.0:
     dependencies:
@@ -7248,20 +7248,20 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.11
 
-  webpack-dev-middleware@8.5.0(webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31)):
+  webpack-dev-middleware@8.5.0(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31)):
     dependencies:
       memfs: 4.80.0
       mime-db: 1.54.0
       range-parser: 1.3.0
-      schema-utils: 4.8.1(webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31))
+      schema-utils: 4.8.1(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31))
     optionalDependencies:
-      webpack: 5.112.1(lightningcss@1.33.0)(postcss@8.5.31)
+      webpack: 5.112.2(lightningcss@1.33.0)(postcss@8.5.31)
       ws: 8.22.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  webpack-dev-server@6.1.0(supports-color@8.1.1)(webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31)):
+  webpack-dev-server@6.1.0(supports-color@8.1.1)(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31)):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -7281,14 +7281,14 @@ snapshots:
       launch-editor: 2.14.2
       open: 11.0.4
       p-retry: 8.0.1
-      schema-utils: 4.8.1(webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31))
+      schema-utils: 4.8.1(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31))
       selfsigned: 5.5.0
       serve-index: 1.9.2(supports-color@8.1.1)
       tinyglobby: 0.2.17
-      webpack-dev-middleware: 8.5.0(webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31))
+      webpack-dev-middleware: 8.5.0(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31))
       ws: 8.22.0
     optionalDependencies:
-      webpack: 5.112.1(lightningcss@1.33.0)(postcss@8.5.31)
+      webpack: 5.112.2(lightningcss@1.33.0)(postcss@8.5.31)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -7302,7 +7302,7 @@ snapshots:
 
   webpack-sources@3.6.0: {}
 
-  webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31):
+  webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31):
     dependencies:
       '@types/estree': 1.0.9
       '@types/json-schema': 7.0.15
@@ -7316,8 +7316,8 @@ snapshots:
       events: 3.3.0
       graceful-fs: 4.2.11
       mime-db: 1.54.0
-      minimizer-webpack-plugin: 5.13.1(lightningcss@1.33.0)(postcss@8.5.31)(webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31))
-      schema-utils: 4.8.1(webpack@5.112.1(lightningcss@1.33.0)(postcss@8.5.31))
+      minimizer-webpack-plugin: 5.13.1(lightningcss@1.33.0)(postcss@8.5.31)(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31))
+      schema-utils: 4.8.1(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.31))
       tapable: 2.3.3
       watchpack: 2.6.3
       webpack-sources: 3.6.0
